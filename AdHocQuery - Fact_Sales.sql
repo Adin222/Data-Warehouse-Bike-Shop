@@ -3,11 +3,11 @@ SELECT
     d.quarter,
     p.brand_name,
     p.category_name,
-    s.first_name + ' ' + s.last_name AS staff_name,
-    l.city AS location_city,
+    s.first_name + ' ' + s.last_name  staff_name,
+    l.city  location_city,
     os.order_status_description,
-    SUM(fs.quantity_sold) AS total_quantity_sold,
-    SUM(fs.total_amount) AS total_sales_amount
+    SUM(fs.quantity_sold)  total_quantity_sold,
+    SUM(fs.total_amount)  total_sales_amount
 FROM
     dw.fact_sales fs
 JOIN
